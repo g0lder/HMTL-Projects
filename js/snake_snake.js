@@ -18,9 +18,6 @@ var direction = ['left', 'forward', 'right'];
 var xApple = Math.floor(Math.random()*gameSize);
 var yApple = Math.floor(Math.random()*gameSize);
 var loopsSinceApple = 0;
-<script src="highscore.js" type="module"></script>
-import highscore from 'highscore.js'
-let points = new highscore('points', 14, 'desc'); /* keep up to 14 scores, under the storage name 'points', sorted in descending order */
 
 window.onload=function() {
     canv = document.getElementById("canvas");
@@ -123,13 +120,6 @@ function resetGame() {
    gameRunning = false;
    if ( score > highScore) {
      highScore = score;
-     points.save(Browser, highScore);
-     let scoreboard = points.load(10);
-     console.log(scoreboard);
-     let scoresList = points.list(6, 'xxx')
-     document.getElementById("HIGHScore").innerHTML = "All Time High Scores: " + scoreboard;
-     let scoresListElement = points.list(6, 'xxx');
-     document.querySelector('body').appendChild(scoresListElement);
      document.getElementById("highScore").innerHTML = "Personal Best: " + highScore;
    }
    tail = setTail;
