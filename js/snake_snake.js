@@ -18,6 +18,7 @@ var direction = ['left', 'forward', 'right'];
 var xApple = Math.floor(Math.random()*gameSize);
 var yApple = Math.floor(Math.random()*gameSize);
 var loopsSinceApple = 0;
+<script src="highscore.js" type="module"></script>
 import highscore from 'highscore.js'
 let points = new highscore('points', 14, 'desc'); /* keep up to 14 scores, under the storage name 'points', sorted in descending order */
 
