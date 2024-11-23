@@ -127,6 +127,8 @@ function resetGame() {
      console.log(scoreboard);
      let scoresList = points.list(6, 'xxx')
      document.getElementById("HIGHScore").innerHTML = "All Time High Scores: " + scoreboard;
+     let scoresListElement = points.list(6, 'xxx');
+     document.querySelector('body').appendChild(scoresListElement);
      document.getElementById("highScore").innerHTML = "Personal Best: " + highScore;
    }
    tail = setTail;
