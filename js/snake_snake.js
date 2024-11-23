@@ -27,7 +27,7 @@ window.onload=function() {
     document.addEventListener("keydown",keyPush);
     gameSpeed = setInterval(game,speedDifficulty);
 }
-
+ 
 function game() {
     xPos += xVel;
     yPos += yVel;
