@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Games of Dread</title>
+  <style>
+    body {
+      font-family: "Lucida Console", Monaco, monospace;
+      background-color: #0b0b0b;
+      color: #e6e6e6;
+      padding: 20px;
+    }
+    h1 {
+      color: #b71c1c;
+      font-size: 2em;
+      text-transform: uppercase;
+      text-shadow: 0 0 5px #8b0000, 0 0 10px #b71c1c;
+    }
+    a {
+      color: #9b59b6;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    a:hover {
+      color: #d35400;
+      text-shadow: 0 0 5px #d35400;
+      text-decoration: underline;
+    }
+    .notes {
+      margin-top: 10px;
+      color: #ffcc00;
+      font-style: italic;
+    }
+    .notes::before {
+      content: "⚠️ ";
+    }
+  </style>
+</head>
+<body>
+  <h1>Games of Dread and Despair</h1>
+  <ul>
+    <li>
+      <a href="https://lenat-1.itch.io/salvation-project" target="_blank">
+        The Salvation Project
+      </a>
+      <div class="notes">Notes: Salvation comes at a cost... are you prepared to pay?</div>
+    </li>
+    <li>
+      <a href="https://papercookies.itch.io/no-players-online" target="_blank">
+        No Players Online (Itch)
+      </a> |
+      <a href="https://store.steampowered.com/app/2701800/No_Players_Online/" target="_blank">
+        No Players Online (Steam)
+      </a>
+      <div class="notes">Notes: The server may be empty... but something is watching you.</div>
+    </li>
+    <li>
+      <a href="https://jonnys-games.itch.io/slide-in-the-woods" target="_blank">
+        Slide in the Woods
+      </a>
+      <div class="notes">Notes: Slide down, again and again. Will you ever escape the descent?</div>
+    </li>
+  </ul>
+</body>
+</html>
