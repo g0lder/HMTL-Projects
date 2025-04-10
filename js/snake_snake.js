@@ -77,23 +77,27 @@ SnakeAI.prototype.simulateMove = function(move) {
 // Evaluate a move given the new head position. Lower score for suicidal moves.
 SnakeAI.prototype.evaluateMove = function(newHead) {
   try {
-    // If the move is suicidal (collision with wall or self), return a very low score.
+    // If the move results in a collision, immediately return a very low score.
     if (this.checkCollision(newHead)) {
       return -Infinity;
     }
 
-    var score = 0;
+    // Survival bonus: reward for making a move that doesn't kill the snake.
+    const SURVIVAL_BONUS = 10;  // You can adjust this value to fine-tune the survival incentive.
+    var score = SURVIVAL_BONUS;
+
     if (!this.game.food) {
       throw new Error("Food object is not defined in the game.");
     }
-    // Compute Manhattan distance from new head to food.
-    var distance = Math.abs(newHead.x - this.game.food.x) + Math.abs(newHead.y - this.game.food.y);
-    // Smaller distance is better – adjust the constant value as needed.
-    score = 100 - distance;
     
-    // Bonus: reward moves with more safe neighboring cells.
+    // Compute Manhattan distance from the new head position to the food.
+    var distance = Math.abs(newHead.x - this.game.food.x) + Math.abs(newHead.y - this.game.food.y);
+    // A lower distance means a higher score; here 100 - distance encourages moving closer to the food.
+    score += 100 - distance;
+    
+    // Additional bonus: reward moves with more safe neighboring cells.
     var safeNeighbors = this.countSafeNeighbors(newHead);
-    score += safeNeighbors * 10; // adjust bonus weight as needed
+    score += safeNeighbors * 10;  // Adjust the weight of this bonus as needed.
 
     return score;
   } catch (e) {
@@ -101,6 +105,7 @@ SnakeAI.prototype.evaluateMove = function(newHead) {
     return -Infinity;
   }
 };
+
 
 // Check for collision with walls or the snake's own body.
 SnakeAI.prototype.checkCollision = function(point) {
