@@ -41,6 +41,11 @@ p {
   font-style: italic;
 }
 
+a {
+  color: #888;
+  text-decoration: none;
+}
+
 /* Hide the secret visually but keep it in the DOM */
 #secret {
   display: none;
