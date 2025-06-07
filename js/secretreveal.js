@@ -16,3 +16,26 @@ document.getElementById('sign').addEventListener('mouseenter', (e) => {
 
 // Super sneaky: log to the console
 console.log("The code is fake! I swear!");
+
+  const target = document.getElementById("target-area");
+
+  let clickCount = 0;
+  let firstClickTime = null;
+  const maxTimeBetweenClicks = 3000; // 3 seconds
+
+  target.addEventListener("click", () => {
+    const now = Date.now();
+
+    if (!firstClickTime || now - firstClickTime > maxTimeBetweenClicks) {
+      clickCount = 1;
+      firstClickTime = now;
+    } else {
+      clickCount++;
+    }
+
+    if (clickCount === 3) {
+      alert("Triple click in bottom-right corner detected!");
+      clickCount = 0;
+      firstClickTime = null;
+    }
+  });
