@@ -34,7 +34,7 @@ console.log("The code is fake! I swear!");
     }
 
     if (clickCount === 3) {
-      alert("Triple click in bottom-right corner detected!");
+      alert("Getting curious... aren't you?");
       clickCount = 0;
       firstClickTime = null;
     }
