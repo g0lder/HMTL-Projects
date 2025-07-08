@@ -10,7 +10,7 @@ document.addEventListener('keydown', (e) => {
 // Optional red herring interaction
 document.getElementById('sign').addEventListener('mouseenter', (e) => {
   if (e.shiftKey) {
-    console.log("Shift-hover detected. Curious, aren't you?");
+    console.log("Shift-hover detected. You fell for that? And you're smart enough to be in the console?");
   }
 });
 
