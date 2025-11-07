@@ -1,0 +1,28 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  background-image: linear-gradient(
+    to top left,
+    darkblue,
+    rgb(0, 0, 210),
+    rgb(1, 1, 226)
+  );
+}
+
+.container * {
+  text-align: center;
+  background-color: darkred;
+  margin: 5px;
+}
+
+#header {
+  text-align: center;
+  font-size: 50px;
+}
+
+#subheader {
+  text-align: center;
+  font-size: 20px;
+}
