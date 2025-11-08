@@ -24,18 +24,19 @@
 }
 
 .listFlex * {
-  max-width: 90%;
+  max-width: 50rem;
   border: 5px rgb(184, 104, 6) solid;
   background-color: rgb(187, 67, 23);
   text-align: center;
+  margin: 5px;
 }
 
 .listFig {
-  width: 30vw;
+  width: auto;
+  max-width: 30vw;
   height: auto;
 }
 
 .listImg {
-  max-width: 95%;
-  width: 30vw;
+  max-width: 80%;
 }
