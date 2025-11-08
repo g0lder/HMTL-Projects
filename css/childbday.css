@@ -1,28 +1,41 @@
-.container {
+#titleCard {
+  text-align: center;
+  background-image: linear-gradient(
+    to left,
+    green,
+    rgb(60, 126, 0),
+    rgb(212, 78, 0)
+  );
+  font-size: 4vw;
+}
+
+#list {
+  background-image: linear-gradient(to top left, red, green);
+}
+
+.listFlex {
   display: flex;
   flex-wrap: wrap;
+  flex-direction: row;
   justify-content: center;
   align-content: center;
-  background-image: linear-gradient(
-    to top left,
-    darkblue,
-    rgb(0, 0, 210),
-    rgb(1, 1, 226)
-  );
+  gap: 10px;
+  font-size: 3vw;
 }
 
-.container * {
+.listFlex * {
+  max-width: 90%;
+  border: 5px rgb(184, 104, 6) solid;
+  background-color: rgb(187, 67, 23);
   text-align: center;
-  background-color: darkred;
-  margin: 5px;
 }
 
-#header {
-  text-align: center;
-  font-size: 50px;
+.listFig {
+  width: 30vw;
+  height: auto;
 }
 
-#subheader {
-  text-align: center;
-  font-size: 20px;
+.listImg {
+  max-width: 95%;
+  width: 30vw;
 }
