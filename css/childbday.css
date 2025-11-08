@@ -7,9 +7,11 @@
     rgb(212, 78, 0)
   );
   font-size: 4vw;
+  border: 3px red solid;
+  border-radius: 5px;
 }
 
-#list {
+body {
   background-image: linear-gradient(to top left, red, green);
 }
 
