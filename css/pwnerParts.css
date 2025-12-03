@@ -1,0 +1,48 @@
+#titleCard {
+  text-align: center;
+  background-image: linear-gradient(
+    to left,
+    rgb(27, 16, 133),
+    rgb(4, 134, 80),
+    rgb(5, 209, 56)
+  );
+  font-size: 4vw;
+  border: 3px rgb(45, 34, 209) solid;
+  border-radius: 5px;
+}
+
+body {
+  background-image: linear-gradient(to top, rgb(29, 10, 196), rgb(14, 194, 95));
+}
+
+.listFlex {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  gap: 10px;
+  font-size: 15px;
+}
+
+.listFlex * {
+  max-width: 50rem;
+  background-color: rgb(12, 107, 145);
+  text-align: center;
+  margin: 5px;
+}
+
+.listFig {
+  width: auto;
+  max-width: 30vw;
+  height: auto;
+}
+
+a {
+    border: 5px rgb(37, 138, 6) solid;
+}
+
+.listImg {
+  max-width: 80%;
+  max-height: 300px;
+}
